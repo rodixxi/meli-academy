@@ -1,2 +1,9 @@
 #!/bin/bash
- echo "Hello F"
+
+function curlApiCall {
+	curl -s -H "Accept: application/json" -H "Content-Type: application/json" -X GET $1
+}
+
+a=`curlApiCall https://api.mercadolibre.com/sites/ | sed -e 's/[{}]/''/g'` #| awk '{n=split($0,a,","); for (i=1; i<=n; i++) print a[i]}'
+
+echo $a
