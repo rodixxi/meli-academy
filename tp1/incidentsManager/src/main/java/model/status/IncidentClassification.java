@@ -1,4 +1,4 @@
-package status;
+package model.status;
 
 public enum IncidentClassification {
     CRITICAL ("Critical"),

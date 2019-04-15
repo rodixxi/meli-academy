@@ -1,7 +1,7 @@
 package model;
 
-import status.IncidentClassification;
-import status.IncidentStatus;
+import model.status.IncidentClassification;
+import model.status.IncidentStatus;
 
 import java.util.Date;
 
