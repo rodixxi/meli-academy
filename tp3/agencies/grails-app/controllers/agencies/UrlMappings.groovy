@@ -8,7 +8,7 @@ class UrlMappings {
                 // apply constraints here
             }
         }
-
+        post "/like"(controller: 'agencies', action: "like")
         "/search"(controller: 'agencies', action: "search")
         "/"(controller: 'agencies')
         "500"(view:'/error')
