@@ -9,7 +9,8 @@ class UrlMappings {
             }
         }
 
-        "/"(controller: "agencies")
+        "/search"(controller: 'agencies', action: "search")
+        "/"(controller: 'agencies')
         "500"(view:'/error')
         "404"(view:'/notFound')
     }
