@@ -2,10 +2,10 @@ package myml
 
 import (
 	"github.com/gin-gonic/gin"
-	"../../services/myml"
+	"github.com/rodixxi/meli-academy/unit10/myml/src/api/services/myml"
 	"net/http"
 	"strconv"
-	"../../utils/apierrors"
+	"github.com/rodixxi/meli-academy/unit10/myml/src/api/utils/apierrors"
 
 )
 

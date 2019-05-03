@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"./controller/myml"
+	"github.com/rodixxi/meli-academy/unit10/myml/src/api/controller/myml"
 )
 
 const (

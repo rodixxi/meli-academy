@@ -1,7 +1,7 @@
 package myml
 
 import (
-	"../../utils/apierrors"
+	"github.com/rodixxi/meli-academy/unit10/myml/src/api/utils/apierrors"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
