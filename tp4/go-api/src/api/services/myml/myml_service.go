@@ -1,16 +1,19 @@
-package user
+package myml
 
 import (
+	"github.com/rodixxi/meli-academy/tp4/go-api/src/api/domain/myml"
 	"github.com/rodixxi/meli-academy/tp4/go-api/src/api/domain/user"
 	"github.com/rodixxi/meli-academy/tp4/go-api/src/api/utils/apierrors"
 )
 
-func GetUserFromAPI(userId int64) (*user.User, *apierrors.ApiError) {
-	userInstance := &user.User{
-		ID: userId,
+func GetMymlFromAPI(userId int64) (*myml.Myml, *apierrors.ApiError) {
+	mymlInstance := &myml.Myml{
+		User: user.User{
+			ID: userId,
+		},
 	}
-	if err := userInstance.GET(); err != nil {
+	if err := mymlInstance.GET(); err != nil {
 		return nil, err
 	}
-	return userInstance, nil
+	return mymlInstance, nil
 }
