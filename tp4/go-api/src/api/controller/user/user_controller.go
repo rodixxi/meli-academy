@@ -1,12 +1,11 @@
-package myml
+package user
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/rodixxi/meli-academy/tp4/go-api/src/api/services/myml"
+	"github.com/rodixxi/meli-academy/tp4/go-api/src/api/services/user"
+	"github.com/rodixxi/meli-academy/tp4/go-api/src/api/utils/apierrors"
 	"net/http"
 	"strconv"
-	"github.com/rodixxi/meli-academy/tp4/go-api/src/api/utils/apierrors"
-
 )
 
 const (
@@ -25,10 +24,10 @@ func GetUser(c *gin.Context) {
 		c.JSON(apiErr.Status, apiErr)
 		return
 	}
-	user, apiErr := myml.GetUserFromAPI(id)
+	userInstance, apiErr := user.GetUserFromAPI(id)
 	if apiErr != nil {
 		c.JSON(apiErr.Status, apiErr)
 		return
 	}
-	c.JSON(http.StatusOK, user)
+	c.JSON(http.StatusOK, userInstance)
 }

@@ -1,4 +1,4 @@
-package myml
+package user
 
 import (
 	"encoding/json"
