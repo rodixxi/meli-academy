@@ -7,10 +7,11 @@ import (
 )
 
 func GetMymlFromAPI(userId int64) (*myml.Myml, *apierrors.ApiError) {
+	userInstace := &user.User{
+		ID: userId,
+	}
 	mymlInstance := &myml.Myml{
-		User: user.User{
-			ID: userId,
-		},
+		User : userInstace,
 	}
 	if err := mymlInstance.GET(); err != nil {
 		return nil, err

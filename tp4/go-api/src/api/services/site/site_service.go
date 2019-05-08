@@ -6,11 +6,11 @@ import (
 )
 
 func GetSiteFromAPI(siteId string) (*site.Site, *apierrors.ApiError) {
-	site := &site.Site{
+	siteInstance := &site.Site{
 		ID: siteId,
 	}
-	if err := site.GET(); err != nil {
+	if err := siteInstance.GET(); err != nil {
 		return nil, err
 	}
-	return site, nil
+	return siteInstance, nil
 }

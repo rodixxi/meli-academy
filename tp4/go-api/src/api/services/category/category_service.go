@@ -6,11 +6,24 @@ import (
 )
 
 func GetCategoryFromAPI(categoryId string) (*category.Category, *apierrors.ApiError) {
-	category := &category.Category{
+	categoriesInstance := &category.Category{
 		ID: categoryId,
 	}
-	if err := category.GET(); err != nil {
+	if err := categoriesInstance.GET(); err != nil {
 		return nil, err
 	}
-	return category, nil
+	return categoriesInstance, nil
 }
+/*
+func GetCategoriesFromAPICall(categoryId string, cResponse chan *myml.Myml, cError chan *apierrors.ApiError) {
+	categoriesInstance := &category.Category{
+		ID: categoryId,
+	}
+	if err := categoriesInstance.GET(); err != nil {
+		cError <- err
+	}
+	cResponse <- &myml.Myml{
+		Categories: categoriesInstance,
+	}
+}
+*/

@@ -7,7 +7,7 @@ import (
 )
 
 type Myml struct {
-	User user.User
-	Site site.Site
-	Categories []category.Category
+	User *user.User					`json:"user"`
+	Site *site.Site					`json:"site"`
+	Categories *[]category.Category	`json:"categories"`
 }
