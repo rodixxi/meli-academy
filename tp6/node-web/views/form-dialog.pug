@@ -1,0 +1,29 @@
+extend layout
+
+block content
+  #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-header
+          h5#exampleModalLabel.modal-title Tendencias Mercado Libre
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+        .modal-body
+          .form-group
+            label(for='site') Seleccionar país:
+            select#site.form-control
+          .form-group
+            label(for='category') Seleccionar categría:
+            select#category.form-control
+          .row
+            .col-sm-6
+              .form-group
+                label(for='columns') Columnas:
+                input#columns.form-control(type='number', value='3', ,size='1', ,min='3', max='5', ,required='')
+            .col-sm-6
+              .form-group
+                label(for='rows') Filas:
+                input#rows.form-control(type='number', value='3', ,size='1', ,min='3', max='5', ,required='')
+        .modal-footer
+          button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+          button.btn.btn-primary(type='button') Save changes

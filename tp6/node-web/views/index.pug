@@ -1,5 +1,19 @@
-extends layout
+extend layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  img(src='/images/meli-logo.png')
+  select#site.custom-select(onchange='seleccionSitio(this)')
+    option(selected='') Eliga un pais
+  select#category.custom-select
+    option(selected='') Eliga una categoria
+  br
+  label Filas:
+  br
+  input#raws.form-control(type='number', value='3', ,size='1', ,min='3', max='5', ,required='')
+  br
+  label Columnas:
+  br
+  input#columns.form-control(type='number', value='3', ,size='1', ,min='3', max='5', ,required='')
+  br
+  button.btn.btn-primary(onclick='envio()') Ok
+  script(src='/javascripts/form/script.js')
