@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    each element in data
+        .card
+            h1=element['name']
+            p=element['id']
